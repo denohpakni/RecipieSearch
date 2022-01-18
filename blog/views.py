@@ -27,13 +27,3 @@ def search(request):
         return render(request,'home.html', {'recipes':recipes})
     else:
         return render(request,"gome.html")
-
-def blog(request):
-    return render(request,'blog/blog.html')
-
-def specific(request):
-    list = [23, " archer"]
-    return HttpResponse(list)
-
-def article(request, article_id):
-    return render(request, 'blog/article.html',{'article_id': article_id})
